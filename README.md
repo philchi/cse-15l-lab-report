@@ -6,11 +6,11 @@ __EEEEE__
 
 **EEEEE**
 
-*E
-*E
-*E
-*E
-*E
+* E
+* E
+* E
+* E
+* E
 
 ---
 
