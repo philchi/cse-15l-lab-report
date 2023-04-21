@@ -28,4 +28,5 @@ List of commands used:
 `touch test.txt` creates a txt file at the current directory called "test"  
 `more test.txt` shows the content in test.txt  
 `cat > test.txt` allows you to write in the test.txt file from the terminal  
-`cat test.txt > wow` copys the content in test.txt and paste it in wow  
+`cat test.txt > wow` copy the content in test.txt and paste it in wow  
+The commands worked as intended in the screenshot.  
