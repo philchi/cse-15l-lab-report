@@ -14,11 +14,18 @@ Attach the account ID with @ieng6.ucsd.edu to make your login account for remote
 The command for remote access is simply ssh followed by space and your account.  
 For example  
 ![Image](ssh.png)  
-After entering the command, you would be prompted to enter the account password.
+After entering the command `ssh accountID@ieng6.ucsd.edu`, you would be prompted to enter the account password.
 Once you have entered the password, the remote access is successfully established.
 
-## What now?
+## Trying out different commands
 After being able to remotely access a computer for the purpose of school work, you can try out a variety of commands 
 to get yourself familiar with the working environment.  
 For example  
 ![Image](commands.png)  
+List of commands used:  
+`ls` shows all the files and folders in the current directory  
+`pwd` shows the path to the current working directory  
+`touch test.txt` creates a txt file at the current directory called "test"  
+`more test.txt` shows the content in test.txt  
+`cat > test.txt` allows you to write in the test.txt file from the terminal  
+`cat test.txt > wow` copys the content in test.txt and paste it in wow  
