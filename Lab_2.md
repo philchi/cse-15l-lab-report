@@ -58,6 +58,8 @@ static int[] reversed(int[] arr) {
 In the old code, the loop was replacing the elements in the input array with the elements in the new empty array. This caused the input array 
 to become an empty array. In the fixed code, `arr[i] = newArray[arr.length - i - 1];` is changed to `newArray[i] = arr[arr.length - i - 1];`, so 
 the new empty array would be filled with the elements of the input array in reverse order as intended. Also, `return arr;` is changed to `return newArray;`, 
-so the new array of reversed elements would returned instead of the original array.  
+so the new array of reversed elements would be returned instead of the original array.  
 
 ## Part 3  
+In lab 2, I learned how to start a server in java as well as how to parse what each part of a URL represents. For example, I now understand that "/" represents a
+path, and "?" represents the start of a query.
