@@ -12,7 +12,7 @@ showed
 while  
 `grep -v what */*/5_Legal_Groups.txt`  
 showed  
-`5 Legal Groups at 1 Locale To Serve the February 3, 2002
+```5 Legal Groups at 1 Locale To Serve the February 3, 2002
 Vulnerable
 Salt Lake City Tribune
 BY EDWARD MCDONOUGH
@@ -61,7 +61,7 @@ explained that the Community Legal Center Campaign still has a long
 ways to go, with a bit more than half of the $4 million projected
 cost received so far. There still needed to be furnishings and
 office equipment and such. He promised that they would be getting
-in touch with us later on the subject.`  
+in touch with us later on the subject.```
   
 Example 2  
 `grep -v "For people" */*pbio.0020040.txt`
@@ -255,5 +255,5 @@ which showed all the matching lines with the line number prepended to the beginn
 `-n` can be useful if you want to quickly navigate the file to get to the matching lines without using "ctrl + f".  
 
 ### References  
-[WikiBooks] (https://en.wikibooks.org/wiki/Grep)
+[WikiBooks] (https://en.wikibooks.org/wiki/Grep)  
 [GeeksforGeeks] (https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
