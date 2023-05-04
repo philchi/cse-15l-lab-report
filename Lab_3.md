@@ -67,7 +67,7 @@ in touch with us later on the subject.
 Example 2  
 `grep -v "For people" */*pbio.0020040.txt`
 showed  
-`       half of the 1990s, everything looked simple and straightforward. It was the stuff you could
+```       half of the 1990s, everything looked simple and straightforward. It was the stuff you could
         explain to sincerely interested relatives who wanted to know what you were spending your
         time on. There were oncogenes and there were tumour suppressor genes. Oncogenes were
         overactive genes and proteins that somehow caused cancer because they were overactive;
@@ -160,7 +160,8 @@ showed
         discussions are based. At a time when microarray analysis has become a standard experiment
         and the many thousands of changes in tumour cells are analysed across the whole genome, it
         is important to keep in mind that the correct interpretation of this wealth of information
-        might be more complicated than the widely accepted models would have us believe.`  
+        might be more complicated than the widely accepted models would have us believe.
+        ```  
 because "For people" was only included in the first line.  
 `-v` could be a quick alternative for regex.  
 
@@ -171,7 +172,7 @@ because "For people" was only included in the first line.
 Example 1  
 `grep "comments" */Post_Rate_Comm/*`  
 showed  
-`government/Post_Rate_Comm/Gleiman_gca2000.txt:comments some of you have been making, it appears that I didn't
+```government/Post_Rate_Comm/Gleiman_gca2000.txt:comments some of you have been making, it appears that I didn't
 government/Post_Rate_Comm/Gleiman_gca2000.txt:though, that most industry comments pale by comparison to some of
 government/Post_Rate_Comm/Gleiman_gca2000.txt:Notwithstanding the comments of one of the Postal
 government/Post_Rate_Comm/Gleiman_gca2000.txt:Despite the comments of a Governor concerning costs
@@ -179,11 +180,12 @@ government/Post_Rate_Comm/ReportToCongress2002WEB.txt:the comments of interested
 government/Post_Rate_Comm/ReportToCongress2002WEB.txt:comments of the Postal Service and other participants, the
 government/Post_Rate_Comm/ReportToCongress2002WEB.txt:The Commission solicited two rounds of comments on the proposal
 government/Post_Rate_Comm/ReportToCongress2002WEB.txt:Upon consideration of the initial comments it received, the
-government/Post_Rate_Comm/ReportToCongress2002WEB.txt:solicited further comments on several broad issues concerning`  
+government/Post_Rate_Comm/ReportToCongress2002WEB.txt:solicited further comments on several broad issues concerning
+```  
 while  
 `grep -h "comments" */Post_Rate_Comm/*`  
 showed  
-`comments some of you have been making, it appears that I didn't
+```comments some of you have been making, it appears that I didn't
 though, that most industry comments pale by comparison to some of
 Notwithstanding the comments of one of the Postal
 Despite the comments of a Governor concerning costs
@@ -191,7 +193,8 @@ the comments of interested parties, implemented four of the
 comments of the Postal Service and other participants, the
 The Commission solicited two rounds of comments on the proposal
 Upon consideration of the initial comments it received, the
-solicited further comments on several broad issues concerning`  
+solicited further comments on several broad issues concerning
+```  
   
 Example 2  
 `grep -h "overview" government/About_LSC/*`  
@@ -199,8 +202,9 @@ showed
 `4) LSC - Michael Genz provided an overview of LSC's technology
 overview)`  
 instead of  
-`government/About_LSC/conference_highlights.txt:4) LSC - Michael Genz provided an overview of LSC's technology
-government/About_LSC/Progress_report.txt:overview)`  
+```government/About_LSC/conference_highlights.txt:4) LSC - Michael Genz provided an overview of LSC's technology
+government/About_LSC/Progress_report.txt:overview)
+```  
 `-h` can be useful if you only care about the lines that include the argument and not the files that include the lines.  
 
 ### Option 3: `grep -c`  
@@ -216,7 +220,7 @@ which is the number of lines in the second example of option 1.
 Example 2  
 `grep -c "comments" */Post_Rate_Comm/*`  
 showed  
-`government/Post_Rate_Comm/Cohenetal_comparison.txt:0
+```government/Post_Rate_Comm/Cohenetal_comparison.txt:0
 government/Post_Rate_Comm/Cohenetal_Cost_Function.txt:0
 government/Post_Rate_Comm/Cohenetal_CreamSkimming.txt:0
 government/Post_Rate_Comm/Cohenetal_DeliveryCost.txt:0
@@ -229,7 +233,8 @@ government/Post_Rate_Comm/Mitchell_RMVancouver.txt:0
 government/Post_Rate_Comm/Mitchell_spyros-first-class.txt:0
 government/Post_Rate_Comm/Redacted_Study.txt:0
 government/Post_Rate_Comm/ReportToCongress2002WEB.txt:5
-government/Post_Rate_Comm/WolakSpeech_usps.txt:0`  
+government/Post_Rate_Comm/WolakSpeech_usps.txt:0
+```  
 which is the number of matching lines in each file under the "Post_Rate_Comm" folder.
 `-c` can be useful if we intend to do some sort of calculation with the number of matching lines, such as getting the ratio of matching and non-matching lines.  
 
@@ -240,18 +245,20 @@ which is the number of matching lines in each file under the "Post_Rate_Comm" fo
 Example 1  
 `grep -n "overview" government/About_LSC/*` 
 showed  
-`government/About_LSC/conference_highlights.txt:244:4) LSC - Michael Genz provided an overview of LSC's technology
-government/About_LSC/Progress_report.txt:606:overview)`  
+```government/About_LSC/conference_highlights.txt:244:4) LSC - Michael Genz provided an overview of LSC's technology
+government/About_LSC/Progress_report.txt:606:overview)
+```  
 which is the second example of option 2 including the line number of the matching lines.  
   
 Example 2  
 `grep -n "comments" government/Post_Rate_Comm/ReportToCongress2002WEB.txt`  
 showed  
-`257:the comments of interested parties, implemented four of the
+```257:the comments of interested parties, implemented four of the
 425:comments of the Postal Service and other participants, the
 447:The Commission solicited two rounds of comments on the proposal
 459:Upon consideration of the initial comments it received, the
-461:solicited further comments on several broad issues concerning`  
+461:solicited further comments on several broad issues concerning
+```  
 which showed all the matching lines with the line number prepended to the beginning of each line.  
 `-n` can be useful if you want to quickly navigate the file to get to the matching lines without using "ctrl + f".  
 
