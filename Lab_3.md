@@ -163,7 +163,8 @@ showed
         might be more complicated than the widely accepted models would have us believe.
 ```  
 because "For people" was only included in the first line.  
-`-v` could be a quick alternative for regex.  
+`-v` could be a quick alternative for a regex expression that avoids all lines with the argument.  
+`-v` could also be useful if you want to delete lines that include the argument.  
 
 ### Option 2: `grep -h`  
 
@@ -199,13 +200,15 @@ solicited further comments on several broad issues concerning
 Example 2  
 `grep -h "overview" government/About_LSC/*`  
 showed  
-`4) LSC - Michael Genz provided an overview of LSC's technology
-overview)`  
+```4) LSC - Michael Genz provided an overview of LSC's technology
+overview)
+```  
 instead of  
 ```government/About_LSC/conference_highlights.txt:4) LSC - Michael Genz provided an overview of LSC's technology
 government/About_LSC/Progress_report.txt:overview)
 ```  
-`-h` can be useful if you only care about the lines that include the argument and not the files that include the lines.  
+`-h` could be useful if you only care about the lines that include the argument and not the files that include the lines.  
+`-h` could also be useful if you want quickly look for sentences that include a phrase, like you do in a dictionary, without needing to deliberately ignore the filepaths and names.  
 
 ### Option 3: `grep -c`  
 
@@ -235,8 +238,9 @@ government/Post_Rate_Comm/Redacted_Study.txt:0
 government/Post_Rate_Comm/ReportToCongress2002WEB.txt:5
 government/Post_Rate_Comm/WolakSpeech_usps.txt:0
 ```  
-which is the number of matching lines in each file under the "Post_Rate_Comm" folder.
-`-c` can be useful if we intend to do some sort of calculation with the number of matching lines, such as getting the ratio of matching and non-matching lines.  
+which is the number of matching lines in each file under the "Post_Rate_Comm" folder.  
+`-c` could be useful if we intend to do some sort of calculation with the number of matching lines, such as getting the ratio of matching and non-matching lines.  
+`-c` could also be useful if you want to see how many matching lines each file in a directory has.  
 
 ### Option 4: `grep -n`
 
@@ -260,7 +264,8 @@ showed
 461:solicited further comments on several broad issues concerning
 ```  
 which showed all the matching lines with the line number prepended to the beginning of each line.  
-`-n` can be useful if you want to quickly navigate the file to get to the matching lines without using "ctrl + f".  
+`-n` could be useful when you want a command that give you a similar output as doing "ctrl + f" over multiple files.  
+`-n` could also be useful if you want to quickly navigate the file to get to the matching lines without using "ctrl + f".  
 
 ### References  
 [WikiBooks](https://en.wikibooks.org/wiki/Grep)  
