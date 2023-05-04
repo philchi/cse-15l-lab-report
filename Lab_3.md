@@ -61,7 +61,8 @@ explained that the Community Legal Center Campaign still has a long
 ways to go, with a bit more than half of the $4 million projected
 cost received so far. There still needed to be furnishings and
 office equipment and such. He promised that they would be getting
-in touch with us later on the subject.```
+in touch with us later on the subject.
+```
   
 Example 2  
 `grep -v "For people" */*pbio.0020040.txt`
