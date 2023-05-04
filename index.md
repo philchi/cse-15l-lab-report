@@ -12,7 +12,8 @@ showed
 while  
 `grep -v what */*/5_Legal_Groups.txt`  
 showed  
-```5 Legal Groups at 1 Locale To Serve the February 3, 2002
+```
+5 Legal Groups at 1 Locale To Serve the February 3, 2002
 Vulnerable
 Salt Lake City Tribune
 BY EDWARD MCDONOUGH
@@ -67,7 +68,8 @@ in touch with us later on the subject.
 Example 2  
 `grep -v "For people" */*pbio.0020040.txt`  
 showed  
-```       half of the 1990s, everything looked simple and straightforward. It was the stuff you could
+```       
+half of the 1990s, everything looked simple and straightforward. It was the stuff you could
         explain to sincerely interested relatives who wanted to know what you were spending your
         time on. There were oncogenes and there were tumour suppressor genes. Oncogenes were
         overactive genes and proteins that somehow caused cancer because they were overactive;
@@ -173,7 +175,8 @@ because "For people" was only included in the first line.
 Example 1  
 `grep "comments" */Post_Rate_Comm/*`  
 showed  
-```government/Post_Rate_Comm/Gleiman_gca2000.txt:comments some of you have been making, it appears that I didn't
+```
+government/Post_Rate_Comm/Gleiman_gca2000.txt:comments some of you have been making, it appears that I didn't
 government/Post_Rate_Comm/Gleiman_gca2000.txt:though, that most industry comments pale by comparison to some of
 government/Post_Rate_Comm/Gleiman_gca2000.txt:Notwithstanding the comments of one of the Postal
 government/Post_Rate_Comm/Gleiman_gca2000.txt:Despite the comments of a Governor concerning costs
@@ -186,7 +189,8 @@ government/Post_Rate_Comm/ReportToCongress2002WEB.txt:solicited further comments
 while  
 `grep -h "comments" */Post_Rate_Comm/*`  
 showed  
-```comments some of you have been making, it appears that I didn't
+```
+comments some of you have been making, it appears that I didn't
 though, that most industry comments pale by comparison to some of
 Notwithstanding the comments of one of the Postal
 Despite the comments of a Governor concerning costs
@@ -200,11 +204,13 @@ solicited further comments on several broad issues concerning
 Example 2  
 `grep -h "overview" government/About_LSC/*`  
 showed  
-```4) LSC - Michael Genz provided an overview of LSC's technology
+```
+4) LSC - Michael Genz provided an overview of LSC's technology
 overview)
 ```  
 instead of  
-```government/About_LSC/conference_highlights.txt:4) LSC - Michael Genz provided an overview of LSC's technology
+```
+government/About_LSC/conference_highlights.txt:4) LSC - Michael Genz provided an overview of LSC's technology
 government/About_LSC/Progress_report.txt:overview)
 ```  
 `-h` could be useful if you need to copy and paste all the lines that include a phrase. 
@@ -223,7 +229,8 @@ which is the number of lines in the second example of option 1.
 Example 2  
 `grep -c "comments" */Post_Rate_Comm/*`  
 showed  
-```government/Post_Rate_Comm/Cohenetal_comparison.txt:0
+```
+government/Post_Rate_Comm/Cohenetal_comparison.txt:0
 government/Post_Rate_Comm/Cohenetal_Cost_Function.txt:0
 government/Post_Rate_Comm/Cohenetal_CreamSkimming.txt:0
 government/Post_Rate_Comm/Cohenetal_DeliveryCost.txt:0
@@ -249,7 +256,8 @@ which is the number of matching lines in each file under the "Post_Rate_Comm" fo
 Example 1  
 `grep -n "overview" government/About_LSC/*`  
 showed  
-```government/About_LSC/conference_highlights.txt:244:4) LSC - Michael Genz provided an overview of LSC's technology
+```
+government/About_LSC/conference_highlights.txt:244:4) LSC - Michael Genz provided an overview of LSC's technology
 government/About_LSC/Progress_report.txt:606:overview)
 ```  
 which is the second example of option 2 including the line number of the matching lines.  
@@ -257,7 +265,8 @@ which is the second example of option 2 including the line number of the matchin
 Example 2  
 `grep -n "comments" government/Post_Rate_Comm/ReportToCongress2002WEB.txt`  
 showed  
-```257:the comments of interested parties, implemented four of the
+```
+257:the comments of interested parties, implemented four of the
 425:comments of the Postal Service and other participants, the
 447:The Commission solicited two rounds of comments on the proposal
 459:Upon consideration of the initial comments it received, the
