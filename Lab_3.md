@@ -207,7 +207,7 @@ instead of
 ```government/About_LSC/conference_highlights.txt:4) LSC - Michael Genz provided an overview of LSC's technology
 government/About_LSC/Progress_report.txt:overview)
 ```  
-`-h` could be useful if you only care about the lines that include the argument and not the files that include the lines.  
+`-h` could be useful if you need to copy and paste all the lines that include a phrase. 
 `-h` could also be useful if you want quickly look for sentences that include a phrase, like you do in a dictionary, without needing to deliberately ignore the filepaths and names.  
 
 ### Option 3: `grep -c`  
