@@ -263,5 +263,5 @@ which showed all the matching lines with the line number prepended to the beginn
 `-n` can be useful if you want to quickly navigate the file to get to the matching lines without using "ctrl + f".  
 
 ### References  
-[WikiBooks] (https://en.wikibooks.org/wiki/Grep)  
-[GeeksforGeeks] (https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+[WikiBooks](https://en.wikibooks.org/wiki/Grep)  
+[GeeksforGeeks](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
