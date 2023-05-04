@@ -15,7 +15,6 @@ showed
 `5 Legal Groups at 1 Locale To Serve the February 3, 2002
 Vulnerable
 Salt Lake City Tribune
-
 BY EDWARD MCDONOUGH
 Five independent Salt Lake organizations that provide legal
 services to the poor, ethnic minorities, seniors and people with
@@ -206,3 +205,55 @@ government/About_LSC/Progress_report.txt:overview)`
 ### Option 3: `grep -c`  
 
 `grep -c` displays the number of matching lines instead of the content of the lines.  
+  
+Example 1  
+`grep -c -v "For people" */*pbio.0020040.txt`  
+showed  
+`105`  
+which is the number of lines in the second example of option 1.  
+  
+Example 2  
+`grep -c "comments" */Post_Rate_Comm/*`  
+showed  
+`government/Post_Rate_Comm/Cohenetal_comparison.txt:0
+government/Post_Rate_Comm/Cohenetal_Cost_Function.txt:0
+government/Post_Rate_Comm/Cohenetal_CreamSkimming.txt:0
+government/Post_Rate_Comm/Cohenetal_DeliveryCost.txt:0
+government/Post_Rate_Comm/Cohenetal_RuralDelivery.txt:0
+government/Post_Rate_Comm/Cohenetal_Scale.txt:0
+government/Post_Rate_Comm/Gleiman_EMASpeech.txt:0
+government/Post_Rate_Comm/Gleiman_gca2000.txt:4
+government/Post_Rate_Comm/Mitchell_6-17-Mit.txt:0
+government/Post_Rate_Comm/Mitchell_RMVancouver.txt:0
+government/Post_Rate_Comm/Mitchell_spyros-first-class.txt:0
+government/Post_Rate_Comm/Redacted_Study.txt:0
+government/Post_Rate_Comm/ReportToCongress2002WEB.txt:5
+government/Post_Rate_Comm/WolakSpeech_usps.txt:0`  
+which is the number of matching lines in each file under the "Post_Rate_Comm" folder.
+`-c` can be useful if we intend to do some sort of calculation with the number of matching lines, such as getting the ratio of matching and non-matching lines.  
+
+### Option 4: `grep -n`
+
+`grep -n` displays the matched lines along with the line numbers.
+  
+Example 1  
+`grep -n "overview" government/About_LSC/*` 
+showed  
+`government/About_LSC/conference_highlights.txt:244:4) LSC - Michael Genz provided an overview of LSC's technology
+government/About_LSC/Progress_report.txt:606:overview)`  
+which is the second example of option 2 including the line number of the matching lines.  
+  
+Example 2  
+`grep -n "comments" government/Post_Rate_Comm/ReportToCongress2002WEB.txt`  
+showed  
+`257:the comments of interested parties, implemented four of the
+425:comments of the Postal Service and other participants, the
+447:The Commission solicited two rounds of comments on the proposal
+459:Upon consideration of the initial comments it received, the
+461:solicited further comments on several broad issues concerning`  
+which showed all the matching lines with the line number prepended to the beginning of each line.  
+`-n` can be useful if you want to quickly navigate the file to get to the matching lines without using "ctrl + f".  
+
+### References  
+[WikiBooks] (https://en.wikibooks.org/wiki/Grep)
+[GeeksforGeeks] (https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
