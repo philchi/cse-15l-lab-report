@@ -161,7 +161,7 @@ showed
         and the many thousands of changes in tumour cells are analysed across the whole genome, it
         is important to keep in mind that the correct interpretation of this wealth of information
         might be more complicated than the widely accepted models would have us believe.
-        ```  
+```  
 because "For people" was only included in the first line.  
 `-v` could be a quick alternative for regex.  
 
@@ -240,10 +240,10 @@ which is the number of matching lines in each file under the "Post_Rate_Comm" fo
 
 ### Option 4: `grep -n`
 
-`grep -n` displays the matched lines along with the line numbers.
+`grep -n` displays the matched lines along with the line numbers.  
   
 Example 1  
-`grep -n "overview" government/About_LSC/*` 
+`grep -n "overview" government/About_LSC/*`  
 showed  
 ```government/About_LSC/conference_highlights.txt:244:4) LSC - Michael Genz provided an overview of LSC's technology
 government/About_LSC/Progress_report.txt:606:overview)
