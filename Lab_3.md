@@ -65,7 +65,7 @@ in touch with us later on the subject.
 ```
   
 Example 2  
-`grep -v "For people" */*pbio.0020040.txt`
+`grep -v "For people" */*pbio.0020040.txt`  
 showed  
 ```       half of the 1990s, everything looked simple and straightforward. It was the stuff you could
         explain to sincerely interested relatives who wanted to know what you were spending your
