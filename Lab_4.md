@@ -25,7 +25,7 @@ The first command switches my working direction to the local copy of the repo.
 The second command runs the bash script that includes the commands that run the test.  
 The test failed.  
   
-# Step 7  
+## Step 7  
 ![image](step7.png)  
 **Key pressed:**  
 `vim ListExamples.java<enter>`  
@@ -37,7 +37,7 @@ The second line navigates to the location with an issue, fixes it, then save qui
 `a2<delete><esc>` changes the "1" in "index1" to "2".  
 `:wq` quits vim.  
   
-# Step 8  
+## Step 8  
 ![image](step8.png)  
 **Key pressed:**  
 `bash test.sh<enter>`  
@@ -45,7 +45,7 @@ The second line navigates to the location with an issue, fixes it, then save qui
 The command runs the bash script that includes the commands that run the test.  
 The test passed successfully.  
   
-# Step 9  
+## Step 9  
 ![image](step9.png)  
 **Key pressed:**  
 `git add ListExamples.java<enter>`  
