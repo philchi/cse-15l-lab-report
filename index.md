@@ -54,4 +54,4 @@ The test passed successfully.
 **Description:**  
 The first command adds the file "ListExamples.java" to the staging area.  
 The second command commits the changes added to the staging area, while including the comment "done".  
-The third command pushes the commits to the remote repo, which is my fork on github.  
+The third command pushes the commit to the remote repo, which is my fork on github.  
