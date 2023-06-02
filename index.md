@@ -1,57 +1,20 @@
-# Lab 4  
-## Step 4  
-![image](step4.png)  
-**Key pressed:**  
-`ssh cs15lsp23jr@ieng6.ucsd.edu<enter>`  
-`<password><enter>`    
-**Description:**  
-The first command specifies the account to log into and starts the login process.  
-The second command includes the password to the account and completes the login process.  
+# Lab 5  
+## Debugging Scenario  
+### Student's question regarding the symptom  
+![image](question_pt_1.png)  
+![image](question_pt_2.png)  
+![image](question_pt_3.png)  
   
-## Step 5  
-![image](step5.png)  
-**Key pressed:**  
-`git clone git@github.com:philchi/lab7.git<enter>`  
-**Description:**  
-The command clones the repo from my fork.  
+### TA response  
+Just like what you described in the post, the issue seems to happen after the line that redirects the output of the test file to junit-output.txt. Try to double 
+check your "CPATH" to see if it contains the correct classpath for both junit jar files.  
   
-## Step 6  
-![image](step6.png)  
-**Key pressed:**  
-`cd lab7<enter>`  
-`bash test.sh<enter>`  
-**Description:**  
-The first command switches my working direction to the local copy of the repo.  
-The second command runs the bash script that includes the commands that run the test.  
-The test failed.  
+### Student's response  
+I double checked my CPATH and found that I have missed the `lib/` before `hamcrest-core-1.3.jar;` in CPATH.  
+Instead of `CPATH='.;hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'`, it should have been `CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'`.  
+![image](bug_response.png)  
   
-## Step 7  
-![image](step7.png)  
-**Key pressed:**  
-`vim ListExamples.java<enter>`  
-`/x1 +<enter>nna2<delete><esc>:wq<enter>`  
-**Description:**  
-The first command opens the file "ListExamples.java" with Vim.  
-The second line navigates to the location with an issue, fixes it, then save quits.  
-`/x1 +<enter>` searches the document for the term "x1 +" and `nn` navigates the cursor to the next two matching terms.  
-`a2<delete><esc>` changes the "1" in "index1" to "2".  
-`:wq` quits vim.  
-  
-## Step 8  
-![image](step8.png)  
-**Key pressed:**  
-`bash test.sh<enter>`  
-**Description:**  
-The command runs the bash script that includes the commands that run the test.  
-The test passed successfully.  
-  
-## Step 9  
-![image](step9.png)  
-**Key pressed:**  
-`git add ListExamples.java<enter>`  
-`git commit -m "done"<enter>`  
-`git push<enter>`  
-**Description:**  
-The first command adds the file "ListExamples.java" to the staging area.  
-The second command commits the changes added to the staging area, while including the comment "done".  
-The third command pushes the commit to the remote repo, which is my fork on github.  
+## Reflection  
+I have never used Vim before. I have only heard from people that Vim is notoriously difficult to use prior to learning it in the course. The Vim tutorial in we did 
+in lab was very helpful in getting us started on the basics of Vim. Now that I know how to use Vim, I will be able to use linux systems more freely. I also learned 
+how to write a bash script that actually functions. This skill would be useful in the future if I have projects that involve automation.
